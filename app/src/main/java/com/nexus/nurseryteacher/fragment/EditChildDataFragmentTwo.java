@@ -1,7 +1,10 @@
 package com.nexus.nurseryteacher.fragment;
 
+import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -16,9 +19,12 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.nexus.nurseryteacher.R;
+import com.nexus.nurseryteacher.activity.AddPostActivity;
 import com.nexus.nurseryteacher.activity.EditChildDataActivity;
 import com.nexus.nurseryteacher.model.Child;
 import com.squareup.picasso.Picasso;
+
+import java.util.Calendar;
 
 public class EditChildDataFragmentTwo extends Fragment implements View.OnClickListener {
 
@@ -28,6 +34,7 @@ public class EditChildDataFragmentTwo extends Fragment implements View.OnClickLi
     private FloatingActionButton changeChildProfileImg_FB;
     private static final int SELECT_IMAGE =1;
     private Child child;
+    private DatePickerDialog.OnDateSetListener dateSetListener;
 
     public EditChildDataFragmentTwo() {
         // Required empty public constructor
@@ -52,6 +59,19 @@ public class EditChildDataFragmentTwo extends Fragment implements View.OnClickLi
         childPicture_imgV = view.findViewById(R.id.childPicture_imageView);
         childAge_editT = view.findViewById(R.id.childAge_value);
         childBDate_editT = view.findViewById(R.id.childBDate_value);
+        childBDate_editT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Calendar calendar = Calendar.getInstance();
+                int year = calendar.get(Calendar.YEAR);
+                int month = calendar.get(Calendar.MONTH);
+                int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog dialog = new DatePickerDialog(getContext(), android.R.style.Theme_Holo_Light_Dialog_MinWidth,dateSetListener, year, month, day );
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+            }
+        });
         comment_editT = view.findViewById(R.id.comment_value);
 
         back_btn = view.findViewById(R.id.back_btn);
