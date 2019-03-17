@@ -62,8 +62,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            //super.onBackPressed();
-            MainActivity.this.getSupportFragmentManager().beginTransaction().replace(R.id.content_main, PostsFragment.newInstance(postsArrayList)).commit();
+            super.onBackPressed();
+            //MainActivity.this.getSupportFragmentManager().beginTransaction().replace(R.id.content_main, PostsFragment.newInstance(postsArrayList)).commit();
         }
     }
 
