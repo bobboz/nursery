@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:weightSum="3">
+
+        <RelativeLayout android:id="@+id/postImage_layout"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1">
+
+            <ImageView android:id="@+id/class_icon"
+                android:layout_height="150dp"
+                android:layout_width="200dp"
+                android:layout_centerInParent="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="20dp"/>
+
+            <android.support.design.widget.FloatingActionButton android:id="@+id/changeClassIcon_floatingBtn"
+                android:layout_height="40dp"
+                android:layout_width="40dp"
+                android:layout_alignEnd="@+id/class_icon"
+                android:layout_alignBottom="@+id/class_icon"
+                android:textAlignment="center"
+                android:src="@drawable/ic_mode_edit_white_24dp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout android:weightSum="3"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.TextInputLayout android:id="@+id/className_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:layout_gravity="center">
+                <EditText android:id="@+id/className_txtV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="@string/class_name"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout android:layout_height="0dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:weightSum="2">
+
+                <Button android:id="@+id/changeClassName_btn"
+                    android:text="@string/change_btn"
+                    android:background="@color/colorAccent"
+                    android:layout_margin="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"/>
+
+                <Button android:id="@+id/cancelModification_btn"
+                    android:text="@string/cancel"
+                    android:background="@color/colorAccent"
+                    android:layout_margin="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/sunday_label"
+                style="@style/scheduleDayUnselected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SUN" />
+
+            <TextView android:id="@+id/sunday_date"
+                style="@style/scheduleDayUnselected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="02" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/monday_label"
+                style="@style/scheduleDayUnselected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MON" />
+
+            <TextView
+                android:id="@+id/monday_date"
+                style="@style/scheduleDayUnselected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="03" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/tuesday_label"
+                style="@style/scheduleDaySelected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TUE" />
+
+            <TextView
+                android:id="@+id/tuesday_date"
+                style="@style/scheduleDaySelected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="04" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/wednesday_label"
+                style="@style/scheduleDayUnselected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WED" />
+
+            <TextView
+                android:id="@+id/wednesday_date"
+                style="@style/scheduleDayUnselected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="04" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/thursday_label"
+                style="@style/scheduleDayUnselected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="THU" />
+
+            <TextView
+                android:id="@+id/thursday_date"
+                style="@style/scheduleDayUnselected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="05" />
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

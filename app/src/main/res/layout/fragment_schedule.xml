@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootview"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingEnd="10dp"
+    android:paddingStart="10dp"
+    android:paddingTop="20dp">
+
+    <TextView android:id="@+id/date_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textSize="10pt"
+        android:text="@string/date_label"/>
+
+    <!--include
+        layout="@layout/schedule_calendar_layout"/-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitCenter"
+            android:padding="5dp"
+            android:src="@drawable/ic_schedule" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="9pt"
+            android:padding="5dp"
+            android:text="@string/schedule_label" />
+
+        <Button android:id="@+id/editSchedule_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="8pt"
+            android:textColor="@color/colorPrimary"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:text="@string/edit_label" />
+
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <LinearLayout android:id="@+id/timeline_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <LinearLayout android:id="@+id/event_one_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.github.vipulasri.timelineview.TimelineView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView android:id="@+id/time1_txtView_timeLine"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/breakfast_time"
+                    android:layout_marginVertical="@dimen/activity_horizontal_margin"
+                    android:padding="10dp"/>
+
+                <LinearLayout android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginVertical="@dimen/activity_horizontal_margin">
+
+                    <TextView android:id="@+id/event1Title_txtV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/breakfast"
+                        android:textSize="9pt"
+                        android:layout_marginStart="10dp"/>
+
+                    <TextView android:id="@+id/event1subTitle_txtV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Event One"
+                        android:textSize="7pt"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/event_two_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.github.vipulasri.timelineview.TimelineView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView android:id="@+id/time2_txtView_timeLine"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/class_one_time"
+                    android:layout_marginVertical="@dimen/activity_horizontal_margin"
+                    android:padding="10dp"/>
+
+                <LinearLayout android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginVertical="@dimen/activity_horizontal_margin">
+
+                    <TextView android:id="@+id/event2Title_txtV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/english_class"
+                        android:textSize="9pt"
+                        android:layout_marginStart="10dp"/>
+
+                    <TextView android:id="@+id/event2subTitle_txtV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/description"
+                        android:textSize="7pt"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/event_three_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.github.vipulasri.timelineview.TimelineView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView android:id="@+id/time3_txtView_timeLine"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/garden_time_one"
+                    android:layout_marginVertical="@dimen/activity_horizontal_margin"
+                    android:padding="10dp"/>
+
+                <LinearLayout android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginVertical="@dimen/activity_horizontal_margin">
+
+                    <TextView android:id="@+id/event3Title_txtV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/garden"
+                        android:textSize="9pt"
+                        android:layout_marginStart="10dp"/>
+
+                    <TextView android:id="@+id/event3subTitle_txtV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/description"
+                        android:textSize="7pt"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/event_four_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.github.vipulasri.timelineview.TimelineView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView android:id="@+id/time4_txtView_timeLine"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/class_two_time"
+                    android:layout_marginVertical="@dimen/activity_horizontal_margin"
+                    android:padding="10dp"/>
+
+                <LinearLayout android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginVertical="@dimen/activity_horizontal_margin">
+
+                    <TextView android:id="@+id/event4Title_txtV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/arabic_class"
+                        android:textSize="9pt"
+                        android:layout_marginStart="10dp"/>
+
+                    <TextView android:id="@+id/event4subTitle_txtV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/description"
+                        android:textSize="7pt"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/event_five_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.github.vipulasri.timelineview.TimelineView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView android:id="@+id/time5_txtView_timeLine"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/snack_time"
+                    android:layout_marginVertical="@dimen/activity_horizontal_margin"
+                    android:padding="10dp"/>
+
+                <LinearLayout android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginVertical="@dimen/activity_horizontal_margin">
+
+                    <TextView android:id="@+id/event5Title_txtV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/snacks"
+                        android:textSize="9pt"
+                        android:layout_marginStart="10dp"/>
+
+                    <TextView android:id="@+id/event5subTitle_txtV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/description"
+                        android:textSize="7pt"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/event_six_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.github.vipulasri.timelineview.TimelineView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView android:id="@+id/time6_txtView_timeLine"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/class_three_time"
+                    android:layout_marginVertical="@dimen/activity_horizontal_margin"
+                    android:padding="10dp"/>
+
+                <LinearLayout android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginVertical="@dimen/activity_horizontal_margin">
+
+                    <TextView android:id="@+id/event6Title_txtV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/math_class"
+                        android:textSize="9pt"
+                        android:layout_marginStart="10dp"/>
+
+                    <TextView android:id="@+id/event6subTitle_txtV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/description"
+                        android:textSize="7pt"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/event_seven_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.github.vipulasri.timelineview.TimelineView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView android:id="@+id/time7_txtView_timeLine"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/garden_time_two"
+                    android:layout_marginVertical="@dimen/activity_horizontal_margin"
+                    android:padding="10dp"/>
+
+                <LinearLayout android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginVertical="@dimen/activity_horizontal_margin">
+
+                    <TextView android:id="@+id/event7Title_txtV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/garden"
+                        android:textSize="9pt"
+                        android:layout_marginStart="10dp"/>
+
+                    <TextView android:id="@+id/event7subTitle_txtV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/description"
+                        android:textSize="7pt"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/event_eight_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.github.vipulasri.timelineview.TimelineView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView android:id="@+id/time8_txtView_timeLine"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/launch_time"
+                    android:layout_marginVertical="@dimen/activity_horizontal_margin"
+                    android:padding="10dp"/>
+
+                <LinearLayout android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginVertical="@dimen/activity_horizontal_margin">
+
+                    <TextView android:id="@+id/event8Title_txtV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/launch"
+                        android:textSize="9pt"
+                        android:layout_marginStart="10dp"/>
+
+                    <TextView android:id="@+id/event8subTitle_txtV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/description"
+                        android:textSize="7pt"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+<!--
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:padding="10dp" />
+
+    </android.support.v7.widget.CardView>
+-->
+</LinearLayout>

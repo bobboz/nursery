@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/classDetails_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="center_horizontal"
+        app:theme="@style/mainToolbarStyle"
+        app:popupTheme="@style/mainMenuItemStyle" />
+
+    <android.support.design.widget.CollapsingToolbarLayout
+        android:id="@+id/collapsing_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:fitsSystemWindows="true"
+        app:expandedTitleMarginStart="48dp"
+        app:expandedTitleMarginEnd="64dp"
+        app:contentScrim="?attr/colorPrimary"
+        app:expandedTitleGravity="top|center_horizontal"
+        app:collapsedTitleGravity="center"
+        app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+        <ImageView android:id="@+id/classPicture_imgView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/tech"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#CF303F9F" />
+
+        <LinearLayout android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/classIcon_classDetailsView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/tech"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/classInformation_layout"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView android:id="@+id/className_txtV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:textSize="10pt"
+                    android:textColor="@color/color_white"
+                    android:textAlignment="center"
+                    android:textAppearance="@android:style/TextAppearance.Large"/>
+
+                <TextView android:id="@+id/classTeacher_txtV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textSize="10pt"
+                    android:layout_gravity="start"
+                    android:paddingStart="10dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/color_white"
+                    android:text="@string/main_teacher"/>
+
+                <TextView android:id="@+id/classCo_Teacher_txtV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:paddingStart="10dp"
+                    android:textAlignment="textStart"
+                    android:textSize="8pt"
+                    android:textColor="@color/color_white"
+                    android:text="@string/co_teacher"
+                    android:textAppearance="@android:style/TextAppearance.Large"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.design.widget.CollapsingToolbarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/classChildren_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</LinearLayout>

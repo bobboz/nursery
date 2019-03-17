@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/editSchedule_listItem_parentLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="2"
+    android:orientation="vertical">
+
+        <LinearLayout  android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <TextView android:id="@+id/sessionHeader"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:textColor="@color/colorPrimary"
+                android:background="@color/color_lightBlue2"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:text="@string/class_label"/>
+
+            <TextView android:id="@+id/resetSession_btn"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/colorPrimary"
+                android:background="@color/color_lightBlue3"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:text="@string/reset_btn"/>
+
+            <ImageButton android:id="@+id/removeSession_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/color_lightBlue4"
+                android:background="@color/color_lightBlue4"
+                android:src="@drawable/ic_delete_white_24dp"/>
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout android:id="@+id/class_data_layout"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+            <android.support.design.widget.TextInputLayout android:id="@+id/classTitle_layout"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content">
+                <EditText android:id="@+id/classTitle_txtV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/title_label"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout android:id="@+id/classDescription_layout"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/classTitle_layout">
+                <EditText android:id="@+id/classDescription_txtV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="7.5pt"
+                    android:hint="@string/description_label"/>
+            </android.support.design.widget.TextInputLayout>
+            <LinearLayout android:id="@+id/setClassTime_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_toRightOf="@id/classTitle_layout"
+                android:layout_toEndOf="@id/classTitle_layout"
+                android:layout_marginVertical="@dimen/activity_horizontal_margin"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:weightSum="5">
+                <ImageButton android:id="@+id/clock_img_btn"
+                    android:layout_height="30dp"
+                    android:layout_width="50dp"
+                    android:layout_weight="2"
+                    android:layout_gravity="center"
+                    android:background="@drawable/clock"
+                    android:padding="10dp"/>
+                <TextView android:id="@+id/classTime_txtV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:layout_weight="3"
+                    android:textSize="7pt"
+                    android:textAlignment="center"
+                    android:hint="@string/time_label"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+</LinearLayout>

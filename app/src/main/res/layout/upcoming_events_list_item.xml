@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/upcomingEvent_listItem_relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/upcomingEventMainPhoto_imgV"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/boy_1" />
+
+    <TextView android:id="@+id/upcomingEvent_list_item_title_txtV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event title"
+        android:textSize="10pt"
+        android:padding="10dp"
+        android:layout_toEndOf="@id/upcomingEventMainPhoto_imgV"
+        android:layout_toRightOf="@id/upcomingEventMainPhoto_imgV"/>
+
+    <TextView android:id="@+id/upcomingEvent_list_item_description_txtV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event Description"
+        android:textSize="8pt"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:layout_toEndOf="@id/upcomingEventMainPhoto_imgV"
+        android:layout_toRightOf="@id/upcomingEventMainPhoto_imgV"
+        android:layout_below="@+id/upcomingEvent_list_item_title_txtV"/>
+
+</RelativeLayout>

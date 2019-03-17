@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:id="@+id/save"
+        android:title="@string/save_btn"/>
+
+    <item android:id="@+id/reset"
+        android:title="@string/reset_btn"/>
+
+</menu>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/homelayout"
+            android:icon="@drawable/home"
+            android:title="@string/home_screen" />
+        <item
+            android:id="@+id/nav_classes"
+            android:icon="@drawable/ic_class"
+            android:title="@string/classes_nav_menu_item" />
+        <item
+            android:id="@+id/nav_schedule"
+            android:icon="@drawable/schedule"
+            android:title="@string/schedule_nav_menu_item" />
+        <item
+            android:id="@+id/nav_events"
+            android:icon="@drawable/schedule"
+            android:title="@string/events_nav_menu_item" />
+        <item
+            android:id="@+id/nav_add_post"
+            android:icon="@drawable/post"
+            android:title="@string/add_post_nav_menu_item" />
+        <item
+            android:id="@+id/nav_fourth_layout"
+            android:icon="@drawable/search"
+            android:title="Search"
+            android:visible="false"/>
+        <!--
+        <item
+            android:id="@+id/settinglayout"
+            android:icon="@drawable/setting"
+            android:title="@string/settings_nav_menu_item" />
+        -->
+
+
+    </group>
+
+    <!--<item android:title=""-->
+        <!--android:layout_gravity="bottom">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/logoutlayout"-->
+                <!--android:icon="@drawable/out"-->
+                <!--android:title="Logout" />-->
+        <!--</menu>-->
+    <!--</item>-->
+
+</menu>
+
+
+

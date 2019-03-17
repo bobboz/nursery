@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="custom_color_seekbar">
+        <item>#FCBB6D</item>
+        <item>#D8737F</item>
+        <item>#AB6C82</item>
+
+    </array>
+
+</resources>

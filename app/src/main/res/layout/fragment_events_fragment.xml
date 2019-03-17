@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button android:id="@+id/upcoming_events_btn"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/upcoming_events"
+            android:layout_margin="10dp"
+            android:background="@color/colorAccent"
+            android:layout_marginVertical="@dimen/activity_vertical_margin"
+            android:layout_gravity="center"/>
+
+        <android.support.v7.widget.CardView android:id="@+id/current_events_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:elevation="3dp"
+            app:cardCornerRadius="1.11dp">
+
+            <LinearLayout android:orientation="vertical"
+                android:layout_height="400dp"
+                android:layout_width="match_parent">
+                <TextView android:id="@+id/current_event_label"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/current_month_events_label"
+                    android:textSize="10pt"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:background="@color/colorAccen_lightt"/>
+
+                <TextView android:id="@+id/current_event_title_label"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textSize="9pt"
+                    android:padding="10dp"
+                    android:textAlignment="center"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/current_events_viewpager"
+                        android:layout_width="260dp"
+                        android:layout_height="260dp"
+                        android:layout_centerHorizontal="true"/>
+
+                    <LinearLayout
+                        android:id="@+id/SliderDots"
+                        android:layout_below="@+id/current_events_viewpager"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_width="260dp"
+                        android:paddingTop="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+         </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView android:id="@+id/lastMonth_events_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:elevation="3dp"
+            app:cardCornerRadius="1.11dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="400dp">
+
+                <TextView android:id="@+id/lastMonth_event_label"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/last_month_events_label"
+                    android:textSize="11pt"
+                    android:textAlignment="center"
+                    android:padding="10dp"
+                    android:background="@color/colorAccen_lightt"/>
+
+                <TextView android:id="@+id/lastMonth_event_title_label"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textSize="9pt"
+                    android:padding="10dp"
+                    android:textAlignment="center"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/lastMonth_events_viewpager"
+                        android:layout_width="260dp"
+                        android:layout_height="260dp"
+                        android:layout_centerHorizontal="true"/>
+
+                    <LinearLayout
+                        android:id="@+id/lastMonthEventsSliderDots"
+                        android:layout_below="@+id/lastMonth_events_viewpager"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_width="260dp"
+                        android:paddingTop="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

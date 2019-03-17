@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    tools:context=".fragment.AddChildFragmentOne">
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:weightSum="7">
+
+        <LinearLayout android:layout_weight="1.25"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+            <ImageView android:id="@+id/childPicture_imgView"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:src="@drawable/boy_1"
+                android:contentDescription="@string/child_profile_picture"/>
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:orientation="vertical">
+                <android.support.design.widget.TextInputLayout android:id="@+id/childName_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                    <EditText android:id="@+id/childName_editT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/childName_label"/>
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout android:id="@+id/childID_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                    <EditText android:id="@+id/childID_editT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/childID_label"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+            <android.support.design.widget.TextInputLayout android:id="@+id/childBirthDate_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <EditText android:id="@+id/childBDate_editT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:hint="@string/childBDate_label"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout android:id="@+id/class_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <EditText android:id="@+id/class_editT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:enabled="false"
+                    android:hint="@string/childClassName_label"/>
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout android:orientation="horizontal"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="0.25"
+            android:weightSum="4">
+            <View android:id="@+id/separator_1"
+                android:layout_height="4dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="@color/color_lightBlue2"/>
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textAlignment="center"
+                android:textSize="10pt"
+                android:textColor="@color/color_lightBlue6"
+                android:text="@string/fathers_data"/>
+            <View android:id="@+id/separator_2"
+                android:layout_height="4dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="@color/color_lightBlue2"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_weight="1.25"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+            <ImageView android:id="@+id/childFatherPicture_imgView"
+                android:layout_height="150dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/boy_1"
+                android:contentDescription="@string/father_id_picture"/>
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <android.support.design.widget.TextInputLayout android:id="@+id/fatherName_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                    <EditText android:id="@+id/fatherName_editT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/childFatherName_label"/>
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout android:id="@+id/fatherLastName_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                    <EditText android:id="@+id/fatherLastName_editT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/childLastName_label"/>
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout android:id="@+id/fatherNumber_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                    <EditText android:id="@+id/fatherNumber_editT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/childFatherNumber_label"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:orientation="horizontal"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="0.25"
+            android:weightSum="4">
+            <View android:id="@+id/separator_3"
+                android:layout_height="4dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="@color/color_lightBlue2"/>
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textAlignment="center"
+                android:textSize="10pt"
+                android:textColor="@color/color_lightBlue6"
+                android:text="@string/mothers_data"/>
+            <View android:id="@+id/separator_4"
+                android:layout_height="4dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="@color/color_lightBlue2"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_weight="1.25"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+            <ImageView android:id="@+id/childMotherPicture_imgView"
+                android:layout_height="150dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/boy_1"
+                android:contentDescription="@string/mother_id_picture"/>
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <android.support.design.widget.TextInputLayout android:id="@+id/motherName_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                    <EditText android:id="@+id/motherName_editT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/childMotherName_label"/>
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout android:id="@+id/motherLastName_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                    <EditText android:id="@+id/motherLastName_editT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/childLastName_label"/>
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout android:id="@+id/motherNumber_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                    <EditText android:id="@+id/motherNumber_editT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/childMotherNumber_label"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View android:id="@+id/separator_5"
+            android:layout_height="4dp"
+            android:layout_width="match_parent"
+            android:background="@color/color_lightBlue2"/>
+
+        <LinearLayout android:layout_weight="1.5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:weightSum="3"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout android:id="@+id/comment_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:layout_gravity="center">
+                <EditText android:id="@+id/comment_editT"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_weight="2"
+                    android:inputType="text"
+                    android:hint="@string/comment"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal">
+
+                <Button android:id="@+id/reset_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/reset_btn"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:background="@color/color_lightBlue2"/>
+
+                <Button android:id="@+id/save_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/next_btn"
+                    android:layout_margin="5dp"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:background="@color/color_lightBlue2"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
