@@ -197,7 +197,8 @@ public class ClassDetailsActivity extends AppCompatActivity {
             startActivity(intent);
         }
         else if(item.getItemId() == R.id.moveChild_menuItem){
-
+           intent = new Intent(this, AddChild.class);
+           startActivity(intent);
         }
 
         return true;
