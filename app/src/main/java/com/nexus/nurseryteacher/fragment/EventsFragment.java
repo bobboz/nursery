@@ -1,24 +1,35 @@
 package com.nexus.nurseryteacher.fragment;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.MediaStore;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.nexus.nurseryteacher.R;
+import com.nexus.nurseryteacher.activity.AddChild;
+import com.nexus.nurseryteacher.activity.ClassDetailsActivity;
 import com.nexus.nurseryteacher.activity.UpcomingEventActivity;
+import com.nexus.nurseryteacher.adapter.ClassesAdapter;
 import com.nexus.nurseryteacher.adapter.EventsAdapter;
+import com.nexus.nurseryteacher.model.Class;
 import com.nexus.nurseryteacher.model.Event;
 
 import java.util.ArrayList;
@@ -53,7 +64,7 @@ public class EventsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstance){
         View rootview = inflater.inflate(R.layout.fragment_events_fragment,null);
 
-        sliderDotspanel_current = (LinearLayout) rootview.findViewById(R.id.SliderDots);
+        sliderDotspanel_current = rootview.findViewById(R.id.SliderDots);
         currentEventTitle_txtV = rootview.findViewById(R.id.current_event_title_label);
         currentEvent_viewPager = rootview.findViewById(R.id.current_events_viewpager);
         upcomingEvents_btn = rootview.findViewById(R.id.upcoming_events_btn);
@@ -80,13 +91,9 @@ public class EventsFragment extends Fragment {
 
             dots_current[i] = new ImageView(getContext());
             dots_current[i].setImageDrawable(getDrawable(getContext(), R.drawable.non_active_dot));
-
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-
             params.setMargins(8, 0, 8, 0);
-
             sliderDotspanel_current.addView(dots_current[i], params);
-
         }
 
         currentEventTitle_txtV.setText(currentEvents.get(0).getEventTitle());
@@ -98,7 +105,6 @@ public class EventsFragment extends Fragment {
                 currentEventTitle_txtV.setText(currentEvents.get(position).getEventTitle());
 
             }
-
             @Override
             public void onPageSelected(int position) {
 
@@ -108,9 +114,7 @@ public class EventsFragment extends Fragment {
                 }
 
                 dots_current[position].setImageDrawable(getDrawable(getContext(), R.drawable.active_dot));
-
             }
-
             @Override
             public void onPageScrollStateChanged(int state) {
 
@@ -196,6 +200,8 @@ public class EventsFragment extends Fragment {
         });
 
         getActivity().setTitle("Events");
+
+        getActivity().getActionBar().setDisplayHomeAsUpEnabled(false);
         return rootview;
     }
 
@@ -307,5 +313,15 @@ public class EventsFragment extends Fragment {
 
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent;
+        if(item.getItemId() == R.id.action_editCurrentEvents){
 
+        }
+        else if(item.getItemId() == R.id.action_editLastMonthEvents){
+
+        }
+        return true;
+    }
 }

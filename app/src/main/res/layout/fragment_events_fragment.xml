@@ -106,7 +106,7 @@
                     android:layout_width="match_parent"
                     android:textSize="9pt"
                     android:padding="10dp"
-                    android:textAlignment="center"/>
+                    android:textAlignment="textStart"/>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
