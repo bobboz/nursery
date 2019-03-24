@@ -201,7 +201,6 @@ public class EventsFragment extends Fragment {
 
         getActivity().setTitle("Events");
 
-        getActivity().getActionBar().setDisplayHomeAsUpEnabled(false);
         return rootview;
     }
 
