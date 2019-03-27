@@ -17,15 +17,6 @@
             android:layout_marginTop="20dp"
             android:contentDescription="@string/post_image_description"/>
 
-        <android.support.design.widget.FloatingActionButton android:id="@+id/removePostImg_floatingBtn"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_gravity="end"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:src="@drawable/ic_delete_white_24dp"/>
-
     </RelativeLayout>
 
     <RelativeLayout android:id="@+id/postData_layout"

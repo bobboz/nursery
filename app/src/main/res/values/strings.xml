@@ -73,6 +73,8 @@
     <string name="cancel">Cancel</string>
 
     <!-- Child Data -->
+    <string name="edit_student_details_label">Edit Student Details</string>
+    <string name="student_details_label">Student Details</string>
     <string name="childID_label">Child ID:</string>
     <string name="childName_label">Child Name:</string>
     <string name="childLastName_label">Last Name:</string>
@@ -105,7 +107,8 @@
     <string name="post_owner">Post Owner</string>
     <string name="post_date">Post Date</string>
     <string name="post_details">Post Details</string>
-    <string name="add_post_btn">Add Post</string>
+    <string name="add_post">Add Post</string>
+    <string name="change_post_img">Change Image</string>
     <string name="post_image_description">Post Image Description</string>
 
     <!-- Class Details Menu -->

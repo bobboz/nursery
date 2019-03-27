@@ -1,34 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
     android:orientation="vertical">
 
-    <RelativeLayout android:id="@+id/postImage_layout"
+    <ImageView android:id="@+id/addPostImage_imgView"
         android:layout_width="match_parent"
-        android:layout_height="200dp">
-
-        <ImageView android:id="@+id/addPostImage_imgView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/happy"
-            android:layout_marginTop="20dp"
-            android:contentDescription="@string/post_image_description"/>
-
-        <android.support.design.widget.FloatingActionButton android:id="@+id/changePostImg_floatingBtn"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_gravity="end"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:src="@drawable/ic_mode_edit_white_24dp"/>
-
-    </RelativeLayout>
+        android:layout_height="200dp"
+        android:src="@drawable/happy"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/post_image_description"/>
 
     <RelativeLayout android:id="@+id/postData_layout"
+        android:layout_below="@+id/addPostImage_imgView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -99,7 +86,7 @@
             <EditText
                 android:id="@+id/postDetails_editText"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="150dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:drawablePadding="10dp"
@@ -108,18 +95,37 @@
                 android:hint="@string/post_details" />
         </android.support.design.widget.TextInputLayout>
 
+        <com.getbase.floatingactionbutton.FloatingActionsMenu android:id="@+id/postActionFloatingMenu"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            app:fab_addButtonColorNormal="@color/colorAccent"
+            app:fab_addButtonColorPressed="@color/color_white"
+            app:fab_addButtonPlusIconColor="@color/color_lightBlue1"
+            app:fab_labelStyle="@style/custom_floatingbutton_style">
+
+            <com.getbase.floatingactionbutton.FloatingActionButton android:id="@+id/addPost_floatingBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="@color/colorAccent"
+                app:fab_colorPressed="@color/color_white"
+                app:fab_size="mini"
+                app:fab_icon="@drawable/ic_add_white_24dp"
+                app:fab_title="@string/add_post"
+                />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton android:id="@+id/changePostImg_floatingBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="@color/colorAccent"
+                app:fab_colorPressed="@color/color_white"
+                app:fab_size="mini"
+                app:fab_icon="@drawable/ic_mode_edit_white_24dp"
+                app:fab_title="@string/change_post_img"
+                />
+        </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
     </RelativeLayout>
 
-    <Button android:id="@+id/addPost_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="1dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        android:background="#fe4081"
-        android:gravity="center"
-        android:text="@string/add_post_btn"
-        android:textColor="#ffffff" />
-</LinearLayout>
+</RelativeLayout>

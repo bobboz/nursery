@@ -53,7 +53,6 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.RecyclerView
 
         private ImageView post_image;
         private TextView postTitle,postOwner,postDetails,postDate;
-        private FloatingActionButton removePost_FB;
 
         public RecyclerViewHolder(View itemView){
             super(itemView);
@@ -62,16 +61,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.RecyclerView
             postOwner= itemView.findViewById(R.id.postOwner_editText);
             postTitle= itemView.findViewById(R.id.postTitle_editText);
             postDate= itemView.findViewById(R.id.postDate_editText);
-            removePost_FB = itemView.findViewById(R.id.removePostImg_floatingBtn);
-            removePost_FB.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    int position = getAdapterPosition();
-                    posts.remove(position);
-                    notifyItemRemoved(position);
-                }
-            });
-        }
+                    }
 
     }
 }

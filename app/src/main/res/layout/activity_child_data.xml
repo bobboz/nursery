@@ -12,8 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_gravity="center_horizontal"
-        app:theme="@style/mainToolbarStyle"
-        app:popupTheme="@style/mainMenuItemStyle" />
+        app:title="@string/student_details_label"
+        app:titleTextColor="@color/color_white"
+        android:background="@color/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        />
 
     <FrameLayout android:id="@+id/childData_fragment_container"
         android:layout_height="match_parent"

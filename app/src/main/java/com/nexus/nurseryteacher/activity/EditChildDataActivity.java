@@ -26,18 +26,20 @@ public class EditChildDataActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_child_data);
 
-        Toolbar toolbar = findViewById(R.id.toolBar);
+        Toolbar toolbar = findViewById(R.id.editStudentData_toolbar);
         setSupportActionBar(toolbar);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
+
+        assert getSupportActionBar() != null;
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        setTitle("Edit Data");
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
             }
         });
-        setTitle("Edit Data");
-        setTitleColor(Color.WHITE);
+
         /*adapter = new EditChildDataFragmentPagerAdapter(getSupportFragmentManager());
 
         adapter.addFragment(editChildDataFragmentOne, "EditChildDataFormOne");

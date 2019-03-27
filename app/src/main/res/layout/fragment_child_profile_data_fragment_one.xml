@@ -273,6 +273,13 @@
                 android:scrollHorizontally="true"/>
 
         </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton android:id="@+id/editStudentData_floatingBtn"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_mode_edit_white_24dp"/>
         <!--
         <LinearLayout android:id="@+id/layout_btns"
             android:layout_width="match_parent"

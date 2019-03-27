@@ -1,36 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".activity.EditChildDataActivity">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <android.support.v4.widget.NestedScrollView
+    <LinearLayout android:id="@+id/mainLayout"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:orientation="vertical">
 
-        <LinearLayout android:id="@+id/mainLayout"
-            android:layout_height="match_parent"
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/editStudentData_toolbar"
             android:layout_width="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:background="@color/colorPrimary"
+            app:title="@string/edit_student_details_label"
+            app:titleTextColor="@color/color_white"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:elevation="4dp"/>
 
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolBar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:textAlignment="center"
-                android:background="@color/colorPrimary"
-                app:theme="@style/mainToolbarStyle"
-                app:popupTheme="@style/mainMenuItemStyle"
-                android:elevation="4dp"/>
+        <FrameLayout android:id="@+id/fragmentContainer_editChildData"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"/>
 
-            <FrameLayout android:id="@+id/fragmentContainer_editChildData"
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"/>
-
-        </LinearLayout>
-    </android.support.v4.widget.NestedScrollView>
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

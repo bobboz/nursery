@@ -1,6 +1,7 @@
 package com.nexus.nurseryteacher.activity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -40,23 +41,21 @@ public class ChildProfileActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.childData_toolBar);
         setSupportActionBar(toolbar);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        assert getSupportActionBar() != null;
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
             }
         });
-
-        setTitle("");
-
         ChildDataFragmentOne childDataFragment = ChildDataFragmentOne.newInstance(getSelectedChild());
         //childDataFragment.setSelectedChild(getSelectedChild());
         this.getSupportFragmentManager().beginTransaction().replace(R.id.childData_fragment_container, childDataFragment).commit();
 
     }
-
+/*
    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -80,7 +79,7 @@ public class ChildProfileActivity extends AppCompatActivity {
 
         return true;
     }
-
+*/
     @Override
     public void onBackPressed() {
         super.onBackPressed();

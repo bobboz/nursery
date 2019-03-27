@@ -66,8 +66,10 @@ public class ClassDetailsActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.classDetails_toolbar);
         toolbar.setTitleTextColor(Color.WHITE);
         setSupportActionBar(toolbar);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        //ActionBar actionBar = getSupportActionBar();
+        assert getSupportActionBar() != null;
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         setTitle("");
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -86,8 +88,8 @@ public class ClassDetailsActivity extends AppCompatActivity {
         coTeacher_txtView = findViewById(R.id.classCo_Teacher_txtV);
         coTeacher_txtView.setText("Co-Teacher: "+coTeacher);
 
-        classIcon = findViewById(R.id.classIcon_classDetailsView);
-        classIcon.setImageResource(classPicture);
+        /*classIcon = findViewById(R.id.classIcon_classDetailsView);
+        classIcon.setImageResource(classPicture);*/
 
         initRecyclerView();
     }
@@ -119,7 +121,7 @@ public class ClassDetailsActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
     }
-
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -203,7 +205,7 @@ public class ClassDetailsActivity extends AppCompatActivity {
 
         return true;
     }
-
+    */
     @Override
     public void onBackPressed() {
         super.onBackPressed();

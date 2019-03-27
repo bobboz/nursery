@@ -1,6 +1,9 @@
 package com.nexus.nurseryteacher.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +18,7 @@ import android.widget.TextView;
 
 import com.nexus.nurseryteacher.R;
 import com.nexus.nurseryteacher.model.Child;
+import com.nexus.nurseryteacher.activity.EditChildDataActivity;
 import com.rtugeek.android.colorseekbar.ColorSeekBar;
 
 public class ChildDataFragmentOne extends Fragment {
@@ -22,6 +26,7 @@ public class ChildDataFragmentOne extends Fragment {
     private ImageView profileImage;
     private TextView childName_editTxt, childFatherName_editTxt, childMotherName_editTxt, childFatherNumber_editTxt, childMotherNumber_editTxt, childID_editTxt, childBDate_editTxt, childAge_editTxt, childClassName_editTxt, comment_txtView;
     private Child child;
+    private FloatingActionButton editStudentData_floatingBtn;
 
     public ChildDataFragmentOne() {
     }
@@ -53,6 +58,15 @@ public class ChildDataFragmentOne extends Fragment {
         childAge_editTxt = view.findViewById(R.id.childAge_value);
         childClassName_editTxt = view.findViewById(R.id.childClassName_value);
         comment_txtView = view.findViewById(R.id.childComment_value);
+
+        editStudentData_floatingBtn = view.findViewById(R.id.editStudentData_floatingBtn);
+        editStudentData_floatingBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (getContext(), EditChildDataActivity.class);
+                startActivity(intent);
+            }
+        });
 
         setData();
 

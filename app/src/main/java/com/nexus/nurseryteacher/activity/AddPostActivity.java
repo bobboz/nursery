@@ -38,8 +38,7 @@ public class AddPostActivity extends AppCompatActivity {
 
     private EditText postTitle_editText, postDetails_editText, postDate_editText, postOwner_editText;
     private ImageView postImage_imgView;
-    private FloatingActionButton changePostImg_FB;
-    private Button addPost_btn;
+    private com.getbase.floatingactionbutton.FloatingActionButton changePostImg_FB, addPost_FB;
     private static final int SELECT_IMAGE =1;
     private DatePickerDialog.OnDateSetListener dateSetListener;
 
@@ -87,7 +86,7 @@ public class AddPostActivity extends AppCompatActivity {
             }
         };
 
-        addPost_btn = findViewById(R.id.addPost_btn);
+        /*addPost_btn = findViewById(R.id.addPost_btn);
         addPost_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -97,13 +96,24 @@ public class AddPostActivity extends AppCompatActivity {
                 AddPostActivity.this.startActivity(intent);
             }
         });
-
+        */
         changePostImg_FB = findViewById(R.id.changePostImg_floatingBtn);
         changePostImg_FB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_GET_CONTENT, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 startActivityForResult(Intent.createChooser(intent, "Select Picture"), SELECT_IMAGE );
+            }
+        });
+
+        addPost_FB = findViewById(R.id.addPost_floatingBtn);
+        addPost_FB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Post post = new Post(R.drawable.tech, R.drawable.happy, postTitle_editText.getText().toString(), postDate_editText.getText().toString(), postOwner_editText.getText().toString(), postDetails_editText.getText().toString());
+                // here we should save post in the DB
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                AddPostActivity.this.startActivity(intent);
             }
         });
 
