@@ -208,38 +208,38 @@ public class EventsFragment extends Fragment {
 
         Event event = new Event();
         //set dummy data
-        event.setEventTitle("Event One");
+        event.setEventTitle("B & D");
         event.setEventDescription("Event One Description");
         event.setEventDate("22-01-2018");
-        event.setEventMainPhoto(R.drawable.event_one_main);
-        event.setEventGallery(new int[]{R.drawable.event_one_1, R.drawable.event_one_2,R.drawable.event_one_3, R.drawable.event_one_4});
+        event.setEventMainPhoto(R.drawable.b_and_d);
+        event.setEventGallery(new int[]{R.drawable.b_and_d_1, R.drawable.b_and_d_2,R.drawable.b_and_d_3, R.drawable.b_and_d_4});
 
         currentEvents.add(event);
 
         event = new Event();
-        event.setEventTitle("Event Two");
+        event.setEventTitle("Belly Beez");
         event.setEventDescription("Event Two Description");
         event.setEventDate("22-02-2018");
-        event.setEventMainPhoto(R.drawable.event_two_main);
-        event.setEventGallery(new int[]{R.drawable.event_two_1, R.drawable.event_two_2,R.drawable.event_two_3, R.drawable.event_two_4});
+        event.setEventMainPhoto(R.drawable.bellybeez);
+        event.setEventGallery(new int[]{R.drawable.bellybeez_1, R.drawable.bellybeez_2,R.drawable.bellybeez_3});
 
         currentEvents.add(event);
 
         event = new Event();
-        event.setEventTitle("Event Three");
+        event.setEventTitle("Fantazy Circus");
         event.setEventDescription("Event Three Description");
         event.setEventDate("22-03-2018");
-        event.setEventMainPhoto(R.drawable.event_three_main);
-        event.setEventGallery(new int[]{R.drawable.event_three_1, R.drawable.event_three_2,R.drawable.event_three_3, R.drawable.event_three_4});
+        event.setEventMainPhoto(R.drawable.fantazy_circus);
+        event.setEventGallery(new int[]{R.drawable.circus_1, R.drawable.circus_2});
 
         currentEvents.add(event);
 
         event = new Event();
-        event.setEventTitle("Event Four");
+        event.setEventTitle("Dream Park");
         event.setEventDescription("Event Four Description");
         event.setEventDate("22-04-2018");
-        event.setEventMainPhoto(R.drawable.event_four_main);
-        event.setEventGallery(new int[]{R.drawable.event_four_1, R.drawable.event_four_2,R.drawable.event_four_3});
+        event.setEventMainPhoto(R.drawable.dream_park);
+        event.setEventGallery(new int[]{R.drawable.dreampark_1, R.drawable.dreampark_2,R.drawable.dreampark_3, R.drawable.dreampark_4, R.drawable.dreampark_5, R.drawable.dreampark_6});
 
         currentEvents.add(event);
 
@@ -262,38 +262,29 @@ public class EventsFragment extends Fragment {
 
         Event event = new Event();
         //set dummy data
-        event.setEventTitle("Last Month Event One");
+        event.setEventTitle("Crazy Water");
         event.setEventDescription("Last Month Event One Description");
         event.setEventDate("22-01-2018");
-        event.setEventMainPhoto(R.drawable.event_one_main);
-        event.setEventGallery(new int[]{R.drawable.boy_1, R.drawable.boy_2,R.drawable.boy_3, R.drawable.boy_4});
+        event.setEventMainPhoto(R.drawable.crazy_water);
+        event.setEventGallery(new int[]{R.drawable.crazywater_1, R.drawable.crazywater_2,R.drawable.crazywater_3});
 
         lastMonthEvents.add(event);
 
         event = new Event();
-        event.setEventTitle("Last Month Event Two");
+        event.setEventTitle("Dream Park");
         event.setEventDescription("Last Month Event Two Description");
         event.setEventDate("22-02-2018");
-        event.setEventMainPhoto(R.drawable.event_two_main);
-        event.setEventGallery(new int[]{R.drawable.girl_1, R.drawable.girl_2,R.drawable.girl_3, R.drawable.girl_4});
+        event.setEventMainPhoto(R.drawable.dream_park);
+        event.setEventGallery(new int[]{R.drawable.dreampark_5, R.drawable.dreampark_2,R.drawable.dreampark_4, R.drawable.dreampark_1});
 
         lastMonthEvents.add(event);
 
         event = new Event();
-        event.setEventTitle("Last Month Event Three");
+        event.setEventTitle("Belly Beez");
         event.setEventDescription("Last Month Event Three Description");
         event.setEventDate("22-03-2018");
-        event.setEventMainPhoto(R.drawable.event_three_main);
-        event.setEventGallery(new int[]{R.drawable.event_three_1, R.drawable.event_three_2,R.drawable.event_three_3, R.drawable.event_three_4});
-
-        lastMonthEvents.add(event);
-
-        event = new Event();
-        event.setEventTitle("Last Month Event Four");
-        event.setEventDescription("Last Month Event Four Description");
-        event.setEventDate("22-04-2018");
-        event.setEventMainPhoto(R.drawable.event_four_main);
-        event.setEventGallery(new int[]{R.drawable.event_four_1, R.drawable.event_four_2,R.drawable.event_four_3});
+        event.setEventMainPhoto(R.drawable.bellybeez);
+        event.setEventGallery(new int[]{R.drawable.bellybeez_1, R.drawable.bellybeez_2,R.drawable.bellybeez_3, R.drawable.bellybeez_4});
 
         lastMonthEvents.add(event);
 

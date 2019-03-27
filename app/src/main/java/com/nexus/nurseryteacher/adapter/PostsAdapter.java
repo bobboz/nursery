@@ -61,7 +61,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.RecyclerView
             postOwner= itemView.findViewById(R.id.postOwner_editText);
             postTitle= itemView.findViewById(R.id.postTitle_editText);
             postDate= itemView.findViewById(R.id.postDate_editText);
-                    }
+        }
 
     }
 }

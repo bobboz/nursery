@@ -58,6 +58,7 @@
                         android:id="@+id/current_events_viewpager"
                         android:layout_width="260dp"
                         android:layout_height="260dp"
+                        android:scaleType="fitCenter"
                         android:layout_centerHorizontal="true"/>
 
                     <LinearLayout
@@ -106,7 +107,7 @@
                     android:layout_width="match_parent"
                     android:textSize="9pt"
                     android:padding="10dp"
-                    android:textAlignment="textStart"/>
+                    android:textAlignment="center"/>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
