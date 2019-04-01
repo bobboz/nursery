@@ -1,6 +1,7 @@
 package com.nexus.nurseryteacher.adapter;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -38,6 +39,11 @@ public class EventsAdapter extends PagerAdapter {
         container.addView(imageView);
 
         return imageView;
+    }
+
+    public int getImageByPosition(int position){
+
+        return mainPhotosList[position];
     }
 
     @Override

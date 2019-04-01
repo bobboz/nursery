@@ -1,10 +1,16 @@
 package com.nexus.nurseryteacher.model;
 
+import android.net.Uri;
+
+import java.lang.reflect.Array;
+import java.net.URL;
+import java.util.ArrayList;
+
 public class Event {
 
     private String eventTitle, eventDescription, eventDate;
     private int eventMainPhoto;
-    private int[] eventGallery;
+    private ArrayList<String>  eventGallery;
 
     public Event(){
 
@@ -42,11 +48,11 @@ public class Event {
         this.eventMainPhoto = eventMainPhoto;
     }
 
-    public int[] getEventGallery() {
+    public ArrayList<String> getEventGallery() {
         return eventGallery;
     }
 
-    public void setEventGallery(int[] eventGallery) {
+    public void setEventGallery(ArrayList<String>  eventGallery) {
         this.eventGallery = eventGallery;
     }
 
