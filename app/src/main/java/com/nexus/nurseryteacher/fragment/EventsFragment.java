@@ -40,7 +40,7 @@ public class EventsFragment extends Fragment {
     private LinearLayout sliderDotspanel_current, sliderDotspanel_lastMonth;
 
 
-    private Dialog eventGalleryDialog;
+    //private Dialog eventGalleryDialog;
     private Button upcomingEvents_btn;
 
     public static EventsFragment newInstance()
@@ -67,14 +67,10 @@ public class EventsFragment extends Fragment {
         currentEvents = getCurrentEvents();
         lastMonthEvents = getLastMonthEvents();
 
-        //mainPhotosList_current = null;
-        mainPhotosList_current = getCurrentEventsMainPhotos(currentEvents);
+        //mainPhotosList_current = getCurrentEventsMainPhotos(currentEvents);
+        ArrayList<EventDetailsObject> eventDetailsArrayList_current = getCurrentEventsMainPhotos(currentEvents);
 
-        //mainPhotosList_lastMonth = null;
-        mainPhotosList_lastMonth = getLastMonthEventsMainPhotos(lastMonthEvents);
-
-        final EventsAdapter adapter = new EventsAdapter(mainPhotosList_current, getContext());
-        currentEvent_viewPager.setAdapter(adapter);
+        final EventsAdapter adapter = new EventsAdapter(eventDetailsArrayList_current, getContext());
 
         dotscount_current = adapter.getCount();
         dots_current = new ImageView[dotscount_current];
@@ -113,10 +109,10 @@ public class EventsFragment extends Fragment {
             }
         });
 
-        currentEvent_viewPager.setOnLongClickListener(new View.OnLongClickListener() {
+        currentEvent_viewPager.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onLongClick(View selectedView) {
-                eventGalleryDialog = new Dialog(getContext());
+            public void onClick(View selectedView) {
+                /*eventGalleryDialog = new Dialog(getContext());
                 eventGalleryDialog.setContentView(R.layout.event_details_dialog);
 
                 LinearLayout eventsGallery_SliderDots = eventGalleryDialog.findViewById(R.id.eventsGallery_SliderDots);
@@ -152,11 +148,11 @@ public class EventsFragment extends Fragment {
                         eventGalleryDialog.cancel();
                     }
                 });
-                eventGalleryDialog.show();
-                return true;
+                eventGalleryDialog.show();*/
+                //return true;
             }
         });
-
+        currentEvent_viewPager.setAdapter(adapter);
         /* ----------------------- */
         /*  For Last Month Events */
 
@@ -164,8 +160,10 @@ public class EventsFragment extends Fragment {
         lastMonthEventTitle_txtV = rootview.findViewById(R.id.lastMonth_event_title_label);
         lastMonthEvent_viewPager = rootview.findViewById(R.id.lastMonth_events_viewpager);
 
-        EventsAdapter adapter_2 = new EventsAdapter(mainPhotosList_lastMonth, getContext());
-        lastMonthEvent_viewPager.setAdapter(adapter_2);
+        //mainPhotosList_lastMonth = getLastMonthEventsMainPhotos(lastMonthEvents);
+        ArrayList<EventDetailsObject> eventDetailsArrayList_lastMonth = getLastMonthEventsMainPhotos(lastMonthEvents);
+
+        EventsAdapter adapter_2 = new EventsAdapter(eventDetailsArrayList_lastMonth, getContext());
 
         dotscount_last = adapter_2.getCount();
         dots_last = new ImageView[dotscount_last];
@@ -217,7 +215,7 @@ public class EventsFragment extends Fragment {
                 Toast.makeText(getContext(),"Open Event Details ID:"+lastMonthEvent_viewPager.getCurrentItem(),Toast.LENGTH_LONG).show();
             }
         });
-
+        lastMonthEvent_viewPager.setAdapter(adapter_2);
         /* ------------------------------- */
 
         upcomingEvents_btn.setOnClickListener(new View.OnClickListener() {
@@ -245,7 +243,7 @@ public class EventsFragment extends Fragment {
         event.setEventMainPhoto(R.drawable.b_and_d);
         //Event Gallery
         eventGallery = new ArrayList<>();
-        imgPath = "D:\\D:\\Github\\Nursery\\events\\b_and_d_1.jpg";
+        imgPath = "D:\\Github\\Nursery\\events\\b_and_d_1.jpg";
         eventGallery.add(imgPath);
         imgPath = "D:\\Github\\Nursery\\events\\b_and_d_2.jpg";
         eventGallery.add(imgPath);
@@ -311,16 +309,19 @@ public class EventsFragment extends Fragment {
         return currentEvents;
     }
 
-    private int[] getCurrentEventsMainPhotos(ArrayList<Event> currentEvents){
+    private ArrayList<EventDetailsObject> getCurrentEventsMainPhotos(ArrayList<Event> currentEvents){
 
-        int[] mainPhotosList = new int[currentEvents.size()];
+        ArrayList<EventDetailsObject> resutls = new ArrayList<>();
+        EventDetailsObject eventObject;
 
         for(int i=0; i < currentEvents.size(); i++){
-            mainPhotosList[i] = currentEvents.get(i).getEventMainPhoto();
+            eventObject = new EventDetailsObject();
+            eventObject.setEventMainPhoto(currentEvents.get(i).getEventMainPhoto());
+            eventObject.setEventGallery(currentEvents.get(i).getEventGallery());
+            resutls.add(eventObject);
         }
 
-        return mainPhotosList;
-
+        return resutls;
     }
 
     private ArrayList<Event> getLastMonthEvents(){
@@ -386,15 +387,19 @@ public class EventsFragment extends Fragment {
         return lastMonthEvents;
     }
 
-    private int[] getLastMonthEventsMainPhotos(ArrayList<Event> lastMonthEvents){
+    private ArrayList<EventDetailsObject> getLastMonthEventsMainPhotos(ArrayList<Event> lastMonthEvents){
 
-        int[] mainPhotosList = new int[lastMonthEvents.size()];
+        ArrayList<EventDetailsObject> resutls = new ArrayList<>();
+        EventDetailsObject eventObject;
 
         for(int i=0; i < lastMonthEvents.size(); i++){
-            mainPhotosList[i] = lastMonthEvents.get(i).getEventMainPhoto();
+            eventObject = new EventDetailsObject();
+            eventObject.setEventMainPhoto(lastMonthEvents.get(i).getEventMainPhoto());
+            eventObject.setEventGallery(lastMonthEvents.get(i).getEventGallery());
+            resutls.add(eventObject);
         }
 
-        return mainPhotosList;
+        return resutls;
 
     }
 
@@ -410,7 +415,7 @@ public class EventsFragment extends Fragment {
         return true;
     }
 
-    private class EventsGalleryAdapter extends PagerAdapter {
+    public static class EventsGalleryAdapter extends PagerAdapter {
 
         private ArrayList<String> gallery;
         private LayoutInflater inflater;
@@ -427,12 +432,16 @@ public class EventsFragment extends Fragment {
             inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View view = inflater.inflate(R.layout.sliding_events_gallery, null);
 
-            //ImageView imageView = view.findViewById(R.id.image);
-            ImageView imageView = new ImageView(context);
+            ImageView imageView = view.findViewById(R.id.image);
+           //ImageView imageView = new ImageView(context);
             //imageView.setImageResource(mainPhotosList[position]);
-            Picasso.get().load(gallery.get(position)).fit().centerCrop().into(imageView);
-            container.addView(imageView);
-
+            if(gallery.get(position) != null && !gallery.get(position).equals("") && gallery.get(position).contains("http"))
+                Picasso.get().load(gallery.get(position)).fit().centerCrop().into(imageView);
+            else{
+                Picasso.get().load(R.drawable.ic_img_not_found).fit().centerCrop().into(imageView);
+                //imageView.setImageResource(R.drawable.ic_img_not_found);
+            }
+            //container.addView(imageView);
             return imageView;
         }
 
@@ -449,6 +458,39 @@ public class EventsFragment extends Fragment {
         @Override
         public boolean isViewFromObject(@NonNull View view, @NonNull Object o) {
             return false;
+        }
+
+        @Override
+        public void destroyItem(ViewGroup container, int position, Object object) {
+
+            ViewPager vp = (ViewPager) container;
+            View view = (View) object;
+            vp.removeView(view);
+        }
+
+    }
+
+    public class EventDetailsObject{
+
+        private int eventMainPhoto;
+        private ArrayList<String> eventGallery;
+
+        public EventDetailsObject(){}
+
+        public int getEventMainPhoto() {
+            return eventMainPhoto;
+        }
+
+        public void setEventMainPhoto(int eventMainPhoto) {
+            this.eventMainPhoto = eventMainPhoto;
+        }
+
+        public ArrayList<String> getEventGallery() {
+            return eventGallery;
+        }
+
+        public void setEventGallery(ArrayList<String> eventGallery) {
+            this.eventGallery = eventGallery;
         }
     }
 }
