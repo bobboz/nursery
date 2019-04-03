@@ -64,14 +64,18 @@ public class EditChildDataActivity extends AppCompatActivity {
         super.onBackPressed();
     }
 
-    public void saveData(String profPicPath, String childAge, String childBD, String comment){
+    public void saveData(String profPicPath, String childAge, String childBD, boolean medicalStatus, String medicalIssueComment, String comment){
 
-        String childName="", childFatherName="", childFatherNumber="", childMotherName="", childMotherNumber="", childID ="";
+        String childName="", childFatherName="", childFatherNumber="", childMotherName="", childMotherNumber="", childID ="", childGender="", childComment="";
         childName = editChildDataFragmentOne.getChildName();
         childFatherName = editChildDataFragmentOne.getChildFatherName();
         childFatherNumber = editChildDataFragmentOne.getChildFatherNumber();
         childMotherName = editChildDataFragmentOne.getChildMotherName();
         childMotherNumber = editChildDataFragmentOne.getChildMotherNumber();
+        childGender = editChildDataFragmentOne.getGender();
+        medicalStatus = medicalStatus;
+        medicalIssueComment = medicalIssueComment;
+        childComment = comment;
         childID = editChildDataFragmentOne.getChildID();
 
         Toast.makeText(this, "Name: " + childName + " , ID: "+childID + "\nAge: "+childAge + " , BD:" + childBD, Toast.LENGTH_LONG).show();

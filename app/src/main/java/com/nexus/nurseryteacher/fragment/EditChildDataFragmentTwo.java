@@ -17,6 +17,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import com.nexus.nurseryteacher.R;
 import com.nexus.nurseryteacher.activity.AddPostActivity;
@@ -29,11 +31,15 @@ import java.util.Calendar;
 public class EditChildDataFragmentTwo extends Fragment implements View.OnClickListener {
 
     private ImageView childPicture_imgV;
-    private EditText childAge_editT, childBDate_editT, comment_editT;
-    private Button back_btn, reset_btn, save_btn;
+    private EditText childAge_editT, childBDate_editT, medicalIssueComment_editT, comment_editT;
+    private Button back_btn/*, reset_btn*/, save_btn;
     private FloatingActionButton changeChildProfileImg_FB;
     private static final int SELECT_IMAGE =1;
     private Child child;
+    private RadioGroup medicalIssues_RadioGroup;
+    private RadioButton yes_rb, no_rb;
+    private String medicalIssueComment;
+    private boolean medicalIssueStatus;
     private DatePickerDialog.OnDateSetListener dateSetListener;
 
     public EditChildDataFragmentTwo() {
@@ -72,14 +78,19 @@ public class EditChildDataFragmentTwo extends Fragment implements View.OnClickLi
                 dialog.show();
             }
         });
+
+        medicalIssues_RadioGroup = view.findViewById(R.id.medicalIssueOptions_radioGroup);
+        yes_rb = medicalIssues_RadioGroup.findViewById(R.id.yes_rb);
+        no_rb = medicalIssues_RadioGroup.findViewById(R.id.no_rb);
+        medicalIssueComment_editT = view.findViewById(R.id.medicalIssueComment_value);
         comment_editT = view.findViewById(R.id.comment_value);
 
         back_btn = view.findViewById(R.id.back_btn);
-        reset_btn = view.findViewById(R.id.reset_btn_fragTwo);
+        //reset_btn = view.findViewById(R.id.reset_btn_fragTwo);
         save_btn = view.findViewById(R.id.save_btn);
 
         back_btn.setOnClickListener(this);
-        reset_btn.setOnClickListener(this);
+        //reset_btn.setOnClickListener(this);
         save_btn.setOnClickListener(this);
 
         changeChildProfileImg_FB = view.findViewById(R.id.changeChildProfileImg_floatingBtn);
@@ -101,6 +112,11 @@ public class EditChildDataFragmentTwo extends Fragment implements View.OnClickLi
         childPicture_imgV.setImageResource(child.getChildPicture());
         childAge_editT.setText(child.getChildAge());
         childBDate_editT.setText(child.getChildBirthDate());
+        if(child.getMedicalStatus())
+            yes_rb.setChecked(true);
+        else
+            no_rb.setChecked(true);
+        medicalIssueComment_editT.setText(child.getMedicalComment());
         comment_editT.setText(child.getComment());
     }
 
@@ -114,16 +130,17 @@ public class EditChildDataFragmentTwo extends Fragment implements View.OnClickLi
 
         if(v.getId() == R.id.back_btn){
             //((EditChildDataActivity)getActivity()).selectFragment(1);
-            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer_editChildData, new EditChildDataFragmentOne()).commit();
+            EditChildDataFragmentOne fragmentOne = EditChildDataFragmentOne.newInstance(child);
+            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer_editChildData, fragmentOne).commit();
         }
-        else if(v.getId() == R.id.reset_btn_fragTwo){
+        /*else if(v.getId() == R.id.reset_btn_fragTwo){
             childAge_editT.setText("");
             childBDate_editT.setText("");
             comment_editT.setText("");
-        }
+        }*/
         else if(v.getId() == R.id.save_btn){
             EditChildDataActivity mainActivity = (EditChildDataActivity) getActivity();
-            mainActivity.saveData("",childAge_editT.getText().toString(), childBDate_editT.getText().toString(), comment_editT.getText().toString());
+            mainActivity.saveData("",childAge_editT.getText().toString(), childBDate_editT.getText().toString(), medicalIssueStatus, medicalIssueComment, comment_editT.getText().toString());
         }
     }
 
@@ -139,6 +156,16 @@ public class EditChildDataFragmentTwo extends Fragment implements View.OnClickLi
                 }
                 break;
         }
+    }
+
+    private void CheckClickedRB(View view){
+
+        int checkedRadioButtonID = medicalIssues_RadioGroup.getCheckedRadioButtonId();
+        if(checkedRadioButtonID == R.id.yes_rb)
+            medicalIssueStatus = true;
+        else
+            medicalIssueStatus = false;
+
     }
 
     /*

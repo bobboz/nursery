@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import com.nexus.nurseryteacher.R;
 import com.nexus.nurseryteacher.activity.EditChildDataActivity;
@@ -18,12 +20,14 @@ import com.nexus.nurseryteacher.model.Child;
 public class EditChildDataFragmentOne extends Fragment implements View.OnClickListener {
 
     private EditText childName_editT, childFatherName_editT, childFatherNumber_editT, childMotherName_editT, childMotherNumber_editT, childID_editT;
-    private String childName, childFatherName, childFatherNumber, childMotherName, childMotherNumber, childID;
-    private Button reset_btn, next_btn;
-    private Intent intent;
-    private Child child;
+    private String childName, childFatherName, childFatherNumber, childMotherName, childMotherNumber, childID, gender;
+    private Button /*reset_btn,*/ next_btn;
+    private RadioGroup gender_radioGroup;
+    private RadioButton boy_rb, girl_rb;
+    private static Child child;
 
     public EditChildDataFragmentOne() {
+
         // Required empty public constructor
     }
 
@@ -36,7 +40,6 @@ public class EditChildDataFragmentOne extends Fragment implements View.OnClickLi
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -50,11 +53,13 @@ public class EditChildDataFragmentOne extends Fragment implements View.OnClickLi
         childMotherName_editT = view.findViewById(R.id.childMotherName_value);
         childMotherNumber_editT = view.findViewById(R.id.childMotherNumber_value);
         childID_editT = view.findViewById(R.id.childID_value);
-
-        reset_btn = view.findViewById(R.id.reset_btn_fragOne);
+        gender_radioGroup = view.findViewById(R.id.gender_layoutRG);
+        boy_rb = view.findViewById(R.id.boy_rb);
+        girl_rb = view.findViewById(R.id.girl_rb);
+        //reset_btn = view.findViewById(R.id.reset_btn_fragOne);
         next_btn = view.findViewById(R.id.next_btn);
 
-        reset_btn.setOnClickListener(this);
+        //reset_btn.setOnClickListener(this);
         next_btn.setOnClickListener(this);
 
         setData();
@@ -70,7 +75,7 @@ public class EditChildDataFragmentOne extends Fragment implements View.OnClickLi
     @Override
     public void onClick(View v) {
 
-        if(v.getId() == R.id.reset_btn_fragOne){
+        /*if(v.getId() == R.id.reset_btn_fragOne){
             childName_editT.setText("");
             childFatherName_editT.setText("");
             childFatherNumber_editT.setText("");
@@ -78,7 +83,7 @@ public class EditChildDataFragmentOne extends Fragment implements View.OnClickLi
             childMotherNumber_editT.setText("");
             childID_editT.setText("");
         }
-        else if(v.getId() == R.id.next_btn){
+        else*/ if(v.getId() == R.id.next_btn){
 
             //((EditChildDataActivity)getActivity()).selectFragment(2);
             EditChildDataFragmentTwo fragmentTwo = EditChildDataFragmentTwo.newInstance(child);
@@ -95,6 +100,10 @@ public class EditChildDataFragmentOne extends Fragment implements View.OnClickLi
         childMotherName_editT.setText(child.getChildMotherName());
         childMotherNumber_editT.setText(child.getChildMotherNumber());
         childID_editT.setText(child.getChildID());
+        if(child.getGender().equals("boy"))
+            boy_rb.setChecked(true);
+        else
+            girl_rb.setChecked(true);
     }
 
     public String getChildName(){
@@ -120,6 +129,21 @@ public class EditChildDataFragmentOne extends Fragment implements View.OnClickLi
     public String getChildID(){
         return childID_editT.getText().toString();
     }
+
+    public String getGender(){
+        if(boy_rb.isChecked())
+            return "boy";
+        return "girl";
+    }
+
+    private void CheckClickedRB(View view){
+        int selectedGenderID = gender_radioGroup.getCheckedRadioButtonId();
+        if(selectedGenderID == R.id.boy_rb)
+            gender ="boy";
+        else
+            gender = "girl";
+    }
+
 /*
     public void setSelectedChild(Child child){
         this.child = child;

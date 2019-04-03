@@ -83,6 +83,9 @@
     <string name="childMotherName_label">Mother\'s Name:</string>
     <string name="childMotherNumber_label">Phone:</string>
     <string name="childAge_label">Age:</string>
+    <string name="childGender_label">Gender:</string>
+    <string name="boy_label">Boy</string>
+    <string name="girl_label">Girl</string>
     <string name="childBDate_label">BirthDate:</string>
     <string name="childTelephone_label">Parent Telephone:</string>
     <string name="childClassName_label">Class Name:</string>
@@ -94,6 +97,10 @@
     <string name="fathers_data">Father\'s Data</string>
     <string name="mothers_data">Mother\'s Data</string>
     <string name="years">years</string>
+    <string name="medical_issue">Any Medical Issues?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="if_yes_please_write_a_description">If yes, please write a description about it</string>
 
     <string name="title_activity_child_info">ChildInfoActivity</string>
     <string name="nav_header_title">Android Studio</string>

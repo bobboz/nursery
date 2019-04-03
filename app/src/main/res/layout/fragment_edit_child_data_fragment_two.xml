@@ -6,72 +6,156 @@
     android:orientation="vertical"
     tools:context=".fragment.EditChildDataFragmentTwo">
 
-    <RelativeLayout android:id="@+id/postImage_layout"
+    <LinearLayout android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_height="200dp">
-
-        <ImageView android:id="@+id/childPicture_imageView"
-            android:layout_width="200dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/boy_1"
-            android:layout_marginTop="20dp"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:layout_centerInParent="true"
-            android:contentDescription="@string/child_profile_picture"/>
-
-        <android.support.design.widget.FloatingActionButton android:id="@+id/changeChildProfileImg_floatingBtn"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_gravity="end"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:src="@drawable/ic_mode_edit_white_24dp"/>
-
-    </RelativeLayout>
-
-    <LinearLayout android:id="@+id/childAge_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="15dp">
+        android:weightSum="3">
 
-        <TextView android:id="@+id/childAge_label"
-            android:layout_height="wrap_content"
-            android:layout_width="60dp"
+        <RelativeLayout android:id="@+id/postImage_layout"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
             android:layout_weight="1"
-            android:text="@string/childAge_label"
-            android:textSize="9pt"/>
+            android:padding="10dp">
 
-        <EditText android:id="@+id/childAge_value"
+            <ImageView android:id="@+id/childPicture_imageView"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/boy_1"
+                android:layout_marginTop="20dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/child_profile_picture"/>
+
+            <android.support.design.widget.FloatingActionButton android:id="@+id/changeChildProfileImg_floatingBtn"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="end"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_mode_edit_white_24dp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout android:layout_weight="2"
             android:layout_height="wrap_content"
-            android:layout_width="100dp"
-            android:layout_weight="1"
-            android:inputType="number"
-            android:autofillHints="@string/years"
-            android:textSize="9pt"/>
+            android:layout_width="0dp"
+            android:orientation="vertical">
+
+            <LinearLayout android:id="@+id/childAge_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <android.support.design.widget.TextInputLayout android:id="@+id/postDetails_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/childAge_layout">
+
+                    <EditText
+                        android:id="@+id/childAge_value"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:autofillHints="@string/years"
+                        android:gravity="top"
+                        android:hint="@string/childAge_label" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/childBDate_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/childAge_layout">
+
+                    <EditText
+                        android:id="@+id/childBDate_value"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:inputType="date"
+                        android:gravity="top"
+                        android:hint="@string/childBDate_label" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+        </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout android:id="@+id/childBDate_layout"
+    <LinearLayout android:id="@+id/medicalIssue_layout"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="15dp">
+        android:layout_height="160dp">
 
-        <TextView android:id="@+id/childBDate_label"
+        <LinearLayout android:id="@+id/question_layout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_width="60dp"
-            android:layout_weight="1"
-            android:text="@string/childBDate_label"
-            android:textSize="9pt"/>
+            android:orientation="horizontal"
+            android:weightSum="4">
 
-        <EditText android:id="@+id/childBDate_value"
-            android:layout_width="100dp"
+            <TextView android:id="@+id/medicalIssueQuestion_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/medical_issue"
+                android:textSize="9pt"
+                android:padding="15dp"
+                android:layout_weight="1.50"/>
+
+            <RadioGroup android:id="@+id/medicalIssueOptions_radioGroup"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="2.5"
+                android:layout_gravity="center">
+                <RadioButton android:id="@+id/yes_rb"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yes"
+                    android:layout_weight="1.25"
+                    android:textSize="9pt"
+                    android:checked="false"
+                    android:onClick="CheckClickedRB"/>
+
+                <RadioButton android:id="@+id/no_rb"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.25"
+                    android:text="@string/no"
+                    android:textSize="9pt"
+                    android:checked="true"
+                    android:onClick="CheckClickedRB"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="date" />
+            android:layout_below="@+id/childAge_layout">
+
+            <EditText
+                android:id="@+id/medicalIssueComment_value"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:inputType="date"
+                android:gravity="top"
+                android:textSize="9pt"
+                android:textStyle="italic"
+                android:paddingStart="15dp"
+                android:paddingLeft="15dp"
+                android:hint="@string/if_yes_please_write_a_description" />
+        </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
 
@@ -81,21 +165,23 @@
         android:orientation="vertical"
         android:padding="15dp">
 
-        <TextView android:id="@+id/comment_label"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/comment"
-            android:textSize="9pt"/>
-
-        <EditText
-            android:id="@+id/comment_value"
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textMultiLine" />
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/childAge_layout">
 
+            <EditText
+                android:id="@+id/comment_value"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:textSize="9pt"
+                android:inputType="textMultiLine"
+                android:paddingStart="15dp"
+                android:paddingLeft="15dp"
+                android:hint="@string/comment" />
+        </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
 
@@ -105,7 +191,7 @@
         android:orientation="horizontal"
         android:padding="20dp"
         android:layout_weight="3">
-
+        <!--
         <Button android:id="@+id/reset_btn_fragTwo"
             android:layout_height="wrap_content"
             android:layout_width="0dp"
@@ -116,22 +202,12 @@
             android:layout_marginStart="5dp"
             android:layout_gravity="center_horizontal|bottom"
             android:textSize="9pt"/>
-
-        <Button android:id="@+id/save_btn"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:text="@string/save_btn"
-            android:background="@color/colorAccent"
-            android:layout_marginEnd="5dp"
-            android:layout_marginStart="5dp"
-            android:layout_gravity="center_horizontal|bottom"
-            android:textSize="9pt"/>
-
+        -->
         <Button android:id="@+id/back_btn"
             android:layout_height="wrap_content"
             android:layout_width="0dp"
-            android:layout_weight="1"
+            android:textColor="@color/color_white"
+            android:layout_weight="1.5"
             android:text="@string/back_btn"
             android:background="@color/colorAccent"
             android:layout_marginEnd="5dp"
@@ -139,6 +215,17 @@
             android:layout_gravity="center_horizontal|bottom"
             android:textSize="9pt"/>
 
+        <Button android:id="@+id/save_btn"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:text="@string/save_btn"
+            android:textColor="@color/color_white"
+            android:background="@color/colorAccent"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:textSize="9pt"/>
     </LinearLayout>
 
 </LinearLayout>

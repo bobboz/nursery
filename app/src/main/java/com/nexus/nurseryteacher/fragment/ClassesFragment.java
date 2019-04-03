@@ -234,6 +234,7 @@ public class ClassesFragment extends Fragment {
             case "Class A Junior":
                 child = new Child();
                 child.setChildName("Adam");
+                child.setChildGender("boy");
                 child.setChildID("001A");
                 child.setChildClass("Class A Junior");
                 child.setChildFatherName("Ahmed");
@@ -243,10 +244,12 @@ public class ClassesFragment extends Fragment {
                 child.setChildBirthDate("09-01-2015");
                 child.setChildAge("4 Years");
                 child.setChildPicture(R.drawable.boy_1);
+                child.setMedicalStatus(false);
                 classChildren.add(child);
 
                 child = new Child();
                 child.setChildName("Nour");
+                child.setChildGender("girl");
                 child.setChildID("002A");
                 child.setChildClass("Class A Junior");
                 child.setChildFatherName("Mohammed");
@@ -255,11 +258,16 @@ public class ClassesFragment extends Fragment {
                 child.setChildMotherNumber("01087654321");
                 child.setChildBirthDate("20-02-2016");
                 child.setChildAge("3 Years");
+                child.setMedicalStatus(true);
+                child.setMedicalComment("AAAAAAAAAAAAAAAaaaaa");
                 child.setChildPicture(R.drawable.girl_1);
                 classChildren.add(child);
 
                 child = new Child();
                 child.setChildName("Ehab");
+                child.setChildGender("boy");
+                child.setMedicalStatus(true);
+                child.setMedicalComment("CCCCCCCCCCCc");
                 child.setChildID("003A");
                 child.setChildClass("Class A Junior");
                 child.setChildFatherName("Ahmed");
@@ -273,6 +281,8 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Aya");
+                child.setChildGender("girl");
+                child.setMedicalStatus(false);
                 child.setChildID("004A");
                 child.setChildClass("Class A Junior");
                 child.setChildFatherName("Sameh");
@@ -282,10 +292,13 @@ public class ClassesFragment extends Fragment {
                 child.setChildBirthDate("09-01-2015");
                 child.setChildAge("4 Years");
                 child.setChildPicture(R.drawable.girl_2);
+                child.setMedicalComment("");
                 classChildren.add(child);
 
                 child = new Child();
                 child.setChildName("Sara");
+                child.setChildGender("girl");
+                child.setMedicalStatus(false);
                 child.setChildID("005A");
                 child.setChildClass("Class A Junior");
                 child.setChildFatherName("Mohammed");
@@ -295,10 +308,13 @@ public class ClassesFragment extends Fragment {
                 child.setChildBirthDate("09-01-2015");
                 child.setChildAge("4 Years");
                 child.setChildPicture(R.drawable.girl_3);
+                child.setMedicalComment("");
                 classChildren.add(child);
 
                 child = new Child();
                 child.setChildName("Shaimaa");
+                child.setChildGender("girl");
+                child.setMedicalStatus(false);
                 child.setChildID("006A");
                 child.setChildClass("Class A Junior");
                 child.setChildFatherName("Hytham");
@@ -308,10 +324,13 @@ public class ClassesFragment extends Fragment {
                 child.setChildBirthDate("09-01-2015");
                 child.setChildAge("4 Years");
                 child.setChildPicture(R.drawable.girl_4);
+                child.setMedicalComment("");
                 classChildren.add(child);
 
                 child = new Child();
                 child.setChildName("Kareem");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
                 child.setChildID("007A");
                 child.setChildClass("Class A Junior");
                 child.setChildFatherName("Hesham");
@@ -321,10 +340,14 @@ public class ClassesFragment extends Fragment {
                 child.setChildBirthDate("09-01-2015");
                 child.setChildAge("4 Years");
                 child.setChildPicture(R.drawable.boy_4);
+                child.setMedicalComment("");
                 classChildren.add(child);
 
                 child = new Child();
                 child.setChildName("Yousef");
+                child.setChildGender("boy");
+                child.setMedicalStatus(true);
+                child.setMedicalComment("BBBBBBBBBBBBb");
                 child.setChildID("008A");
                 child.setChildClass("Class A Junior");
                 child.setChildFatherName("Amir");
@@ -338,6 +361,8 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Fares");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
                 child.setChildID("009A");
                 child.setChildClass("Class A Junior");
                 child.setChildFatherName("Ahmed");
@@ -347,10 +372,14 @@ public class ClassesFragment extends Fragment {
                 child.setChildBirthDate("09-01-2015");
                 child.setChildAge("4 Years");
                 child.setChildPicture(R.drawable.boy_5);
+                child.setMedicalComment("");
                 classChildren.add(child);
 
                 child = new Child();
                 child.setChildName("Mohammed");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("010A");
                 child.setChildClass("Class A Junior");
                 child.setChildFatherName("Ahmed");
@@ -364,6 +393,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Ibrahim");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("011A");
                 child.setChildClass("Class A Junior");
                 child.setChildFatherName("Islam");
@@ -379,6 +411,9 @@ public class ClassesFragment extends Fragment {
             case "Class B Junior":
                 child = new Child();
                 child.setChildName("Adam");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("001B");
                 child.setChildClass("Class B Junior");
                 child.setChildFatherName("Ahmed");
@@ -392,6 +427,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Nour");
+                child.setChildGender("boy");
+                child.setMedicalStatus(true);
+                child.setMedicalComment("AAAAAAAAAAAAAAAa");
                 child.setChildID("002B");
                 child.setChildClass("Class B Junior");
                 child.setChildFatherName("Mohammed");
@@ -405,6 +443,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Ehab");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("003B");
                 child.setChildClass("Class B Junior");
                 child.setChildFatherName("Ahmed");
@@ -418,6 +459,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Aseel");
+                child.setChildGender("girl");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("004B");
                 child.setChildClass("Class B Junior");
                 child.setChildFatherName("Mohammed");
@@ -431,6 +475,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Adam");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("005B");
                 child.setChildClass("Class B Junior");
                 child.setChildFatherName("Mohammed");
@@ -444,6 +491,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Sahar");
+                child.setChildGender("girl");
+                child.setMedicalStatus(true);
+                child.setMedicalComment("BBBBBBBBBBBBBBBBBb");
                 child.setChildID("006B");
                 child.setChildClass("Class B Junior");
                 child.setChildFatherName("Ehab");
@@ -457,6 +507,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Zeyad");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("007B");
                 child.setChildClass("Class B Junior");
                 child.setChildFatherName("Ibrahim");
@@ -470,6 +523,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Jana");
+                child.setChildGender("girl");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("008B");
                 child.setChildClass("Class B Junior");
                 child.setChildFatherName("Amir");
@@ -483,6 +539,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Jory");
+                child.setChildGender("girl");
+                child.setMedicalStatus(true);
+                child.setMedicalComment("UUUUUUUU\nKKKKKKKK\nJJJJJJJJ");
                 child.setChildID("009B");
                 child.setChildClass("Class B Junior");
                 child.setChildFatherName("Sherif");
@@ -498,6 +557,9 @@ public class ClassesFragment extends Fragment {
             case "Class C Junior":
                 child = new Child();
                 child.setChildName("Adam");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("001C");
                 child.setChildClass("Class C Junior");
                 child.setChildFatherName("Ahmed");
@@ -511,6 +573,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Nour");
+                child.setChildGender("girl");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("002C");
                 child.setChildClass("Class C Junior");
                 child.setChildFatherName("Mohammed");
@@ -524,6 +589,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Ehab");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("003C");
                 child.setChildClass("Class C Junior");
                 child.setChildFatherName("Ahmed");
@@ -537,6 +605,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Adam");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("004C");
                 child.setChildClass("Class C Junior");
                 child.setChildFatherName("Ahmed");
@@ -550,6 +621,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Adam");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("005C");
                 child.setChildClass("Class C Junior");
                 child.setChildFatherName("Ahmed");
@@ -562,7 +636,10 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Adam");
+                child.setChildName("Jody");
+                child.setChildGender("girl");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("006C");
                 child.setChildClass("Class C Junior");
                 child.setChildFatherName("Ahmed");
@@ -575,7 +652,10 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Adam");
+                child.setChildName("Yara");
+                child.setChildGender("girl");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("007C");
                 child.setChildClass("Class C Junior");
                 child.setChildFatherName("Ahmed");
@@ -589,6 +669,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Yousef");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("008C");
                 child.setChildClass("Class C Junior");
                 child.setChildFatherName("Amir");
@@ -602,6 +685,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Fares");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("009C");
                 child.setChildClass("Class C Junior");
                 child.setChildFatherName("Ahmed");
@@ -615,6 +701,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Fares");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("010C");
                 child.setChildClass("Class C Junior");
                 child.setChildFatherName("Ahmed");
@@ -630,6 +719,9 @@ public class ClassesFragment extends Fragment {
             case "Class A Senior":
                 child = new Child();
                 child.setChildName("Adam");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("101A");
                 child.setChildClass("Class A Senior");
                 child.setChildFatherName("Ahmed");
@@ -643,6 +735,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Nour");
+                child.setChildGender("girl");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("102A");
                 child.setChildClass("Class A Senior");
                 child.setChildFatherName("Mohammed");
@@ -656,6 +751,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Ehab");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("103A");
                 child.setChildClass("Class A Senior");
                 child.setChildFatherName("Ahmed");
@@ -668,7 +766,10 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Adam");
+                child.setChildName("Ahmed");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("104A");
                 child.setChildClass("Class A Senior");
                 child.setChildFatherName("Ahmed");
@@ -681,7 +782,10 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Adam");
+                child.setChildName("Omar");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("105A");
                 child.setChildClass("Class A Senior");
                 child.setChildFatherName("Ahmed");
@@ -694,7 +798,10 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Adam");
+                child.setChildName("Mohammed");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("106A");
                 child.setChildClass("Class A Senior");
                 child.setChildFatherName("Ahmed");
@@ -707,7 +814,10 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Adam");
+                child.setChildName("Souzy");
+                child.setChildGender("girl");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("107A");
                 child.setChildClass("Class A Senior");
                 child.setChildFatherName("Ahmed");
@@ -721,6 +831,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Yousef");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("108C");
                 child.setChildClass("Class A Senior");
                 child.setChildFatherName("Amir");
@@ -734,6 +847,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Fares");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("109A");
                 child.setChildClass("Class A Senior");
                 child.setChildFatherName("Ahmed");
@@ -746,7 +862,10 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Fares");
+                child.setChildName("Feras");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("110A");
                 child.setChildClass("Class A Senior");
                 child.setChildFatherName("Ahmed");
@@ -759,7 +878,10 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Fares");
+                child.setChildName("Mariam");
+                child.setChildGender("girl");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("111A");
                 child.setChildClass("Class A Senior");
                 child.setChildFatherName("Ahmed");
@@ -772,7 +894,10 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Fares");
+                child.setChildName("Youmna");
+                child.setChildGender("girl");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("112A");
                 child.setChildClass("Class A Senior");
                 child.setChildFatherName("Ahmed");
@@ -787,7 +912,10 @@ public class ClassesFragment extends Fragment {
             /* ---------------------------------------------------------------------------------- */
             case "Class B Senior":
                 child = new Child();
-                child.setChildName("Adam");
+                child.setChildName("Sara");
+                child.setChildGender("girl");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("101B");
                 child.setChildClass("Class B Senior");
                 child.setChildFatherName("Ahmed");
@@ -800,7 +928,10 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Nour");
+                child.setChildName("Hend");
+                child.setChildGender("girl");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("102B");
                 child.setChildClass("Class B Senior");
                 child.setChildFatherName("Mohammed");
@@ -813,7 +944,10 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Ehab");
+                child.setChildName("Soaad");
+                child.setChildGender("girl");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("103B");
                 child.setChildClass("Class B Senior");
                 child.setChildFatherName("Ahmed");
@@ -826,7 +960,10 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Adam");
+                child.setChildName("Rehab");
+                child.setChildGender("girl");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("104B");
                 child.setChildClass("Class B Senior");
                 child.setChildFatherName("Ahmed");
@@ -839,7 +976,10 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Adam");
+                child.setChildName("Eslam");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("105B");
                 child.setChildClass("Class B Senior");
                 child.setChildFatherName("Ahmed");
@@ -852,7 +992,10 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Adam");
+                child.setChildName("Abdel Rahman");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("106B");
                 child.setChildClass("Class B Senior");
                 child.setChildFatherName("Ahmed");
@@ -865,7 +1008,10 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Adam");
+                child.setChildName("Adel");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("107B");
                 child.setChildClass("Class B Senior");
                 child.setChildFatherName("Ahmed");
@@ -878,7 +1024,10 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Yousef");
+                child.setChildName("Jody");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("108B");
                 child.setChildClass("Class B Senior");
                 child.setChildFatherName("Amir");
@@ -891,7 +1040,10 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Fares");
+                child.setChildName("Jory");
+                child.setChildGender("girl");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("109B");
                 child.setChildClass("Class B Senior");
                 child.setChildFatherName("Ahmed");
@@ -904,7 +1056,10 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Fares");
+                child.setChildName("Lyla");
+                child.setChildGender("girl");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("110B");
                 child.setChildClass("Class B Senior");
                 child.setChildFatherName("Ahmed");
@@ -917,7 +1072,10 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Fares");
+                child.setChildName("Yehya");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("111B");
                 child.setChildClass("Class B Senior");
                 child.setChildFatherName("Ahmed");
@@ -930,7 +1088,10 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Fares");
+                child.setChildName("Fawzeya");
+                child.setChildGender("girl");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("112B");
                 child.setChildClass("Class B Senior");
                 child.setChildFatherName("Ahmed");
@@ -945,7 +1106,10 @@ public class ClassesFragment extends Fragment {
             /* ---------------------------------------------------------------------------------- */
             case "Class C Senior":
                 child = new Child();
-                child.setChildName("Adam");
+                child.setChildName("Khadeja");
+                child.setChildGender("girl");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("101C");
                 child.setChildClass("Class C Senior");
                 child.setChildFatherName("Ahmed");
@@ -959,6 +1123,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Nour");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("102C");
                 child.setChildClass("Class C Senior");
                 child.setChildFatherName("Mohammed");
@@ -971,7 +1138,10 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Ehab");
+                child.setChildName("Hosam");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("103C");
                 child.setChildClass("Class C Senior");
                 child.setChildFatherName("Ahmed");
@@ -984,7 +1154,10 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Adam");
+                child.setChildName("Hatem");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("104C");
                 child.setChildClass("Class C Senior");
                 child.setChildFatherName("Ahmed");
@@ -997,7 +1170,10 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Adam");
+                child.setChildName("Karim");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("105C");
                 child.setChildClass("Class C Senior");
                 child.setChildFatherName("Ahmed");
@@ -1010,7 +1186,10 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Adam");
+                child.setChildName("Amr");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("106C");
                 child.setChildClass("Class C Senior");
                 child.setChildFatherName("Ahmed");
@@ -1024,6 +1203,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Adam");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("107C");
                 child.setChildClass("Class C Senior");
                 child.setChildFatherName("Ahmed");
@@ -1037,6 +1219,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Yousef");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("108C");
                 child.setChildClass("Class C Senior");
                 child.setChildFatherName("Amir");
@@ -1052,6 +1237,9 @@ public class ClassesFragment extends Fragment {
             case "Class D Senior":
                 child = new Child();
                 child.setChildName("Adam");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("101D");
                 child.setChildClass("Class D Senior");
                 child.setChildFatherName("Ahmed");
@@ -1065,6 +1253,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Nour");
+                child.setChildGender("girl");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("102D");
                 child.setChildClass("Class D Senior");
                 child.setChildFatherName("Mohammed");
@@ -1078,6 +1269,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Ehab");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("103D");
                 child.setChildClass("Class D Senior");
                 child.setChildFatherName("Ahmed");
@@ -1091,6 +1285,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Adam");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("104D");
                 child.setChildClass("Class D Senior");
                 child.setChildFatherName("Ahmed");
@@ -1103,11 +1300,14 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Adam");
+                child.setChildName("Sief");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("105D");
                 child.setChildClass("Class D Senior");
-                child.setChildFatherName("Ahmed");
-                child.setChildMotherName("Basma");
+                child.setChildFatherName("Hosam");
+                child.setChildMotherName("Mervat");
                 child.setChildFatherNumber("01012345678");
                 child.setChildMotherNumber("01012345678");
                 child.setChildBirthDate("09-01-2015");
@@ -1116,11 +1316,14 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Adam");
+                child.setChildName("Yasin");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("106D");
                 child.setChildClass("Class D Senior");
-                child.setChildFatherName("Ahmed");
-                child.setChildMotherName("Basma");
+                child.setChildFatherName("Hosam");
+                child.setChildMotherName("Mervat");
                 child.setChildFatherNumber("01012345678");
                 child.setChildMotherNumber("01012345678");
                 child.setChildBirthDate("09-01-2015");
@@ -1129,11 +1332,14 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Adam");
+                child.setChildName("Omar");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("107D");
                 child.setChildClass("Class D Senior");
-                child.setChildFatherName("Ahmed");
-                child.setChildMotherName("Basma");
+                child.setChildFatherName("Karim");
+                child.setChildMotherName("Reem");
                 child.setChildFatherNumber("01012345678");
                 child.setChildMotherNumber("01012345678");
                 child.setChildBirthDate("09-01-2015");
@@ -1142,10 +1348,29 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Yousef");
+                child.setChildName("Haytham");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("108D");
                 child.setChildClass("Class D Senior");
-                child.setChildFatherName("Amir");
+                child.setChildFatherName("Fathy");
+                child.setChildMotherName("Fatem");
+                child.setChildFatherNumber("01012345678");
+                child.setChildMotherNumber("01012345678");
+                child.setChildBirthDate("09-01-2015");
+                child.setChildAge("4 Years");
+                child.setChildPicture(R.drawable.boy_1);
+                classChildren.add(child);
+
+                child = new Child();
+                child.setChildName("Mohammed");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
+                child.setChildID("109D");
+                child.setChildClass("Class D Senior");
+                child.setChildFatherName("Khaled");
                 child.setChildMotherName("Noha");
                 child.setChildFatherNumber("01012345678");
                 child.setChildMotherNumber("01012345678");
@@ -1155,24 +1380,14 @@ public class ClassesFragment extends Fragment {
                 classChildren.add(child);
 
                 child = new Child();
-                child.setChildName("Adam");
-                child.setChildID("109D");
-                child.setChildClass("Class D Senior");
-                child.setChildFatherName("Ahmed");
-                child.setChildMotherName("Basma");
-                child.setChildFatherNumber("01012345678");
-                child.setChildMotherNumber("01012345678");
-                child.setChildBirthDate("09-01-2015");
-                child.setChildAge("4 Years");
-                child.setChildPicture(R.drawable.boy_1);
-                classChildren.add(child);
-
-                child = new Child();
-                child.setChildName("Adam");
+                child.setChildName("Mohab");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("110D");
                 child.setChildClass("Class D Senior");
-                child.setChildFatherName("Ahmed");
-                child.setChildMotherName("Basma");
+                child.setChildFatherName("Yasser");
+                child.setChildMotherName("Heba");
                 child.setChildFatherNumber("01012345678");
                 child.setChildMotherNumber("01012345678");
                 child.setChildBirthDate("09-01-2015");
@@ -1182,6 +1397,9 @@ public class ClassesFragment extends Fragment {
 
                 child = new Child();
                 child.setChildName("Yousef");
+                child.setChildGender("boy");
+                child.setMedicalStatus(false);
+                child.setMedicalComment("");
                 child.setChildID("111D");
                 child.setChildClass("Class D Senior");
                 child.setChildFatherName("Amir");

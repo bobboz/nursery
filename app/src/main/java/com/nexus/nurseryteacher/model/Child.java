@@ -4,6 +4,7 @@ public class Child {
 
     private String childName;
     private String childID;
+    private String childGender;
     private String childClass;
     private String childFatherName;
     private String childMotherName;
@@ -13,6 +14,8 @@ public class Child {
     private String childBirthDate;
     private String comment;
     private int childPicture;
+    private boolean medicalStatus;
+    private String medicalComment;
 
     public Child(){
         childName ="";
@@ -23,7 +26,9 @@ public class Child {
         childAge="";
         childBirthDate="";
         comment="";
-
+        childGender ="";
+        medicalStatus=false;
+        medicalComment="";
     }
 
     public String getChildName() {
@@ -114,4 +119,27 @@ public class Child {
         this.comment = comment;
     }
 
+    public String getGender(){
+        return childGender;
+    }
+
+    public void setChildGender(String childGender){
+        this.childGender = childGender;
+    }
+
+    public boolean getMedicalStatus(){
+        return medicalStatus;
+    }
+
+    public void setMedicalStatus(boolean medicalStatus){
+        this.medicalStatus = medicalStatus;
+    }
+
+    public String getMedicalComment(){
+        return medicalComment;
+    }
+
+    public void setMedicalComment(String medicalComment){
+        this.medicalComment = medicalComment;
+    }
 }
