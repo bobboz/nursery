@@ -98,6 +98,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             /*Intent intent = new Intent(this, EventsActivity.class);
             startActivity(intent);*/
+        }else if (id == R.id.nav_retrofit_layout) {
+            Intent intent = new Intent(this, RetrofitTestActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

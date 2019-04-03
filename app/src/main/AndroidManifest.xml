@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nexus.nurseryteacher">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/login"
@@ -9,7 +11,8 @@
         android:roundIcon="@drawable/login"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.AddChild"></activity>
+        <activity android:name=".activity.RetrofitTestActivity"></activity>
+        <activity android:name=".activity.AddChild" />
         <activity android:name=".activity.EditScheduleActivity" />
         <activity android:name=".activity.UpcomingEventActivity" />
         <activity android:name=".activity.EventsActivity" />

@@ -28,6 +28,12 @@
             android:icon="@drawable/search"
             android:title="Search"
             android:visible="false"/>
+
+        <item
+            android:id="@+id/nav_retrofit_layout"
+            android:icon="@drawable/search"
+            android:title="Retrofit"
+            android:visible="true"/>
         <!--
         <item
             android:id="@+id/settinglayout"
