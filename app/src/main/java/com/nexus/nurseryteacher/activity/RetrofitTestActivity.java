@@ -1,6 +1,7 @@
 package com.nexus.nurseryteacher.activity;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,7 +24,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitTestActivity extends AppCompatActivity {
 
     private TextView get_result;
-    private Button getPosts_btn, getPostById_btn, getComments_btn;
+    private Button getPosts_btn, getPostById_btn, getComments_btn, post_btn;
     private JsonPlaceHolderApi jsonPlaceHolderApi;
 
     @Override
@@ -58,9 +59,16 @@ public class RetrofitTestActivity extends AppCompatActivity {
             }
         });
 
+        post_btn = findViewById(R.id.post_btn);
+        post_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RetrofitTestActivity.this, PostActivity.class);
+                startActivity(intent);
+            }
+        });
+
         get_result = findViewById(R.id.get_result);
-
-
 
     }
 

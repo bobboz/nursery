@@ -11,7 +11,8 @@
         android:roundIcon="@drawable/login"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.RetrofitTestActivity"></activity>
+        <activity android:name=".activity.PostActivity"></activity>
+        <activity android:name=".activity.RetrofitTestActivity" />
         <activity android:name=".activity.AddChild" />
         <activity android:name=".activity.EditScheduleActivity" />
         <activity android:name=".activity.UpcomingEventActivity" />

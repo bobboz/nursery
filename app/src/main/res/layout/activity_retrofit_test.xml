@@ -34,6 +34,12 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:text="Get Comments"/>
+
+        <Button android:id="@+id/post_btn"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Post"/>
     </LinearLayout>
 
     <android.support.v4.widget.NestedScrollView android:layout_height="match_parent"
